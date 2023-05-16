@@ -1,0 +1,31 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  user-select: none;
+  overscroll-behavior: none;
+
+  @include media("<=tablet") {
+    font-size: 10px;
+    overflow-x: hidden;
+  }
+}
+
+body {
+  @extend %description-18;
+
+  background: $color-white;
+  color: $color-black;
+  font-family: $font-body;
+}
+
+// .page {
+//   opacity: 0;
+// }

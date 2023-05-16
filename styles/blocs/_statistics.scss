@@ -1,0 +1,70 @@
+.statistics {
+  padding-bottom: 18rem;
+}
+
+.statistics_wrapper {
+  @extend %space-between-center;
+}
+
+.statistics_grid {
+  column-gap: 7rem;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  row-gap: 8rem;
+}
+
+.statistics_item {
+  @extend %center-vertically;
+
+  gap: 2.8rem;
+  width: fit-content;
+
+  &:nth-child(odd) {
+    padding-right: 7rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: #e0e0e0;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 7rem;
+      width: 0.1rem;
+    }
+  }
+}
+
+.statistics_number {
+  display: flex;
+}
+
+.statistics_number_text {
+  .paragraph {
+    @extend %heading-50;
+  }
+}
+
+.statistics_number_sign {
+  .paragraph {
+    @extend %heading-50;
+
+    color: inherit;
+  }
+}
+
+.statistics_description {
+  min-width: 16.3rem;
+}
+
+.statistics_figure {
+  height: 24.9rem;
+  position: relative;
+  width: 48rem;
+}
+
+.statistics_image {
+  @extend %cover;
+}

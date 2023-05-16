@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Tempor incididunt sint veniam aliqua consectetur voluptate. Ad Lorem anim ex pariatur exercitation ipsum nulla ea proident fugiat nulla et enim minim."
+						}
+					}
+				]
+			},
+			"highlighted_word_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#4ed8cb",
+				"type": "Color"
+			}
+		},
+		"items": []
+	}
+]

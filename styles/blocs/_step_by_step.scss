@@ -1,0 +1,58 @@
+.step {
+}
+
+.step_wrapper {
+  border-top: 0.1rem solid #e0e0e0;
+  padding-top: 14.4rem;
+}
+
+.step_headline {
+  max-width: 62.9rem;
+  margin: auto;
+  text-align: center;
+}
+
+.step_grid {
+  @extend %space-between;
+
+  margin-top: 5rem;
+}
+
+.step_card {
+  @extend %flex-column;
+
+  background-color: #f3f3f3;
+  border-radius: 2rem;
+  gap: 6rem;
+  padding: 6rem 4.8rem;
+}
+
+.step_card_info {
+  @extend %flex-column;
+
+  gap: 1.8rem;
+}
+
+.step_card_headline {
+  max-width: 34rem;
+}
+
+.step_card_description {
+  max-width: 34rem;
+}
+
+.step_link {
+  color: $color-purple;
+}
+
+.step_card_border {
+  background-color: #e0e0e0;
+  display: block;
+  height: 0.1rem;
+  order: 2;
+  width: 100%;
+}
+
+.step_image {
+  max-height: 33.748rem;
+}

@@ -1,0 +1,19 @@
+.sponsors {
+  padding: 15rem 0;
+}
+
+.sponsors_wrapper {
+}
+
+.sponsors_grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  justify-content: space-between;
+  row-gap: 6rem;
+}
+
+.sponsors_image {
+  max-width: 15.9rem;
+  display: block;
+}

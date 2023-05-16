@@ -1,0 +1,62 @@
+.paragraph {
+  @extend %description-18;
+}
+
+.heading {
+  &.xxl {
+    @extend %heading-80;
+  }
+  &.xl {
+    @extend %heading-50;
+  }
+  &.lg {
+    @extend %heading-45;
+  }
+  &.md {
+    @extend %heading-40;
+  }
+  &.sm {
+    @extend %heading-35;
+  }
+  &.xsm {
+    @extend %heading-30;
+  }
+}
+
+.button {
+  @extend %description-18;
+
+  border-radius: 9rem;
+  display: block;
+  font-weight: 500;
+  padding: 1.8rem 6rem;
+  text-align: center;
+  text-transform: capitalize;
+  width: fit-content;
+
+  &.gradient {
+    background: $gradient;
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &.dark {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &.grey {
+    background-color: #f3f3f3;
+    color: $color-black;
+  }
+
+  &.white {
+    background-color: $color-white;
+    // border: 0.1rem solid #e1e1e1;
+    color: $color-black;
+  }
+}
+
+.max-width {
+  @extend %max-width;
+}

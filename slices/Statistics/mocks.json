@@ -1,0 +1,88 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+					"width": 4172,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+				"width": 4172,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"number",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ullamco incididunt sint sit pariatur nostrud irure proident proident sit ex. Ex ex ipsum et aliquip in adipisicing consequat officia dolore minim nostrud est et et. Proident velit et anim commodo anim duis aute eu aliqua voluptate quis ad quis eiusmod commodo."
+									}
+								}
+							]
+						}
+					],
+					[
+						"sign_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#a341e9",
+							"type": "Color"
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Laborum voluptate dolore do ut irure aute aliqua proident amet proident cupidatat labore fugiat."
+									}
+								}
+							]
+						}
+					],
+					[
+						"sign",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Dolor et mollit exercitation anim dolore do laborum eu mollit ea veniam tempor nostrud consequat. Ea occaecat veniam ex esse velit irure."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

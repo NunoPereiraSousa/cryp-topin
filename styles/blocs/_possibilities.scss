@@ -1,0 +1,60 @@
+.possibilities {
+  background-color: #eaeef1;
+  padding: 17.2rem;
+}
+
+.possibilities_wrapper {
+  @extend %space-between;
+}
+
+.possibilities_info {
+}
+
+.possibilities_headline {
+  max-width: 49.8rem;
+
+  strong {
+    color: #ff82be;
+  }
+}
+
+.possibilities_description {
+  margin: 2.8rem 0 4rem;
+  max-width: 54.9rem;
+}
+
+.possibilities_grid {
+  display: flex;
+  gap: 2.8rem;
+  margin-bottom: 2.8rem;
+}
+
+.possibility_badge {
+  @extend %center-vertically;
+
+  border-radius: 30rem;
+  gap: 1rem;
+  padding: 1.8rem 2.2rem;
+}
+
+.possibility_badge_icon {
+}
+
+.possibility_badge_description {
+  font-weight: 500;
+  white-space: nowrap;
+
+  .paragraph {
+    color: inherit;
+  }
+}
+
+.possibilities_figure {
+  height: 67.1rem;
+  position: relative;
+  width: 76.6rem;
+}
+
+.possibilities_image {
+  @extend %cover;
+}

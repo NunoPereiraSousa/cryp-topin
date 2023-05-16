@@ -1,0 +1,29 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": { "type": "SharedSlice" },
+            "become_a_trader": { "type": "SharedSlice" },
+            "highlighted_articles": { "type": "SharedSlice" },
+            "highlight": { "type": "SharedSlice" },
+            "newsletter": { "type": "SharedSlice" },
+            "statistics": { "type": "SharedSlice" },
+            "sponsors": { "type": "SharedSlice" },
+            "possibilities": { "type": "SharedSlice" },
+            "step_by_step": { "type": "SharedSlice" },
+            "testimonial": { "type": "SharedSlice" }
+          }
+        }
+      }
+    }
+  }
+}

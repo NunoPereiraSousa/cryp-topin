@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui dolor proident eu enim ullamco sunt proident duis laboris consectetur laboris esse sit. Consequat eiusmod cillum ea. Lorem proident officia consequat pariatur excepteur occaecat ullamco commodo cupidatat duis."
+						}
+					}
+				]
+			},
+			"highlighted_word_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#4323b7",
+				"type": "Color"
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+					"width": 5000,
+					"height": 4613
+				},
+				"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+				"width": 5000,
+				"height": 4613,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			},
+			"input_label": {
+				"__TYPE__": "FieldContent",
+				"value": "over",
+				"type": "Text"
+			},
+			"button_label": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem elit proident labore enim sint nisi adipisicing laboris duis adipisicing proident aliquip. Et fugiat eu anim ut anim cupidatat excepteur qui consectetur proident consectetur consectetur nulla eiusmod. Dolor tempor nostrud do labore proident duis sunt."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
