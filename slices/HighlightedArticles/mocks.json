@@ -13,11 +13,6 @@
 						}
 					}
 				]
-			},
-			"highlighted_word_color": {
-				"__TYPE__": "FieldContent",
-				"value": "#4ed8cb",
-				"type": "Color"
 			}
 		},
 		"items": []

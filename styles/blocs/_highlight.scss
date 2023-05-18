@@ -1,5 +1,100 @@
 .highlight {
-  padding: 20rem 0 16rem;
+  padding: 14rem 0;
+
+  &.highlightMobileApp {
+    background-color: #263238;
+
+    .highlight_wrapper {
+      @extend %space-between;
+    }
+
+    .highlight_info {
+      @extend %flex-column;
+
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .heading,
+    .paragraph {
+      color: $color-white;
+    }
+
+    .highlight_figure {
+      height: 46.7rem;
+      position: relative;
+      width: 66.7rem;
+    }
+
+    .highlight_image {
+      @extend %cover;
+    }
+
+    .highlight_description {
+      max-width: 54.9rem;
+      margin: 2.6rem 0;
+    }
+
+    .highlight_details {
+      @extend %space-between-center;
+
+      width: 100%;
+    }
+
+    .highlight_details_info {
+      @extend %center-horizontally;
+
+      gap: 2rem;
+    }
+
+    .highlight_details_text {
+      @extend %flex-column;
+
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .highlight_details_text_sub_headline {
+    }
+
+    .highlight_details_text_label {
+      .paragraph {
+        @extend %description-20;
+
+        color: $color-white;
+        font-weight: 700;
+      }
+    }
+
+    .highlight_details_buttons {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .highlight_details_button {
+      @extend %center;
+
+      background-color: transparent;
+      border: 0.1rem solid #394952;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 8rem;
+      transition: all 0.4s ease;
+      width: 8rem;
+
+      &:hover {
+        background-color: #394952;
+      }
+
+      img {
+        transition: all 0.4s ease;
+      }
+
+      &:hover img {
+        transform: rotate(360deg);
+      }
+    }
+  }
 }
 
 .highlight_wrapper {
@@ -25,7 +120,7 @@
     #ffd7a5 104.17%
   );
   border-radius: 2.4rem;
-  height: 90.112rem;
+  height: 77.112rem;
   padding: 12.8rem 9.4rem 0;
   margin-top: 6rem;
 }
@@ -73,9 +168,10 @@
 }
 
 .highlight_banner_figure {
-  height: 70rem;
+  height: 55rem;
+  margin: auto;
   position: relative;
-  width: 100%;
+  width: 70%;
 }
 
 .highlight_banner_image {

@@ -1,0 +1,122 @@
+.testimonial {
+  padding: 11rem 0 14rem;
+}
+
+.testimonial_wrapper {
+  @extend %space-between;
+}
+
+.testimonial_info {
+  height: fit-content;
+  position: sticky;
+  top: 0;
+  padding-top: 5rem;
+}
+
+.testimonial_headline {
+  max-width: 40.9rem;
+  margin-bottom: 3.2rem;
+
+  strong {
+    @extend %gradient-bold-text;
+  }
+}
+
+.testimonial_description {
+  max-width: 54.9rem;
+}
+
+.testimonial_list {
+  @extend %flex-column;
+
+  gap: 6rem;
+  padding-top: 5rem;
+}
+
+.testimonial_card {
+  @extend %flex-column;
+
+  border-radius: 4rem;
+  gap: 3.6rem;
+  padding: 5.2rem 6rem;
+
+  &:first-child {
+    background: linear-gradient(
+      180.47deg,
+      #fff8f0 -30.47%,
+      rgba(255, 255, 255, 0) 154.12%
+    );
+    border: 1px solid #f9f9f9;
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(
+      180.47deg,
+      #f0fdff -30.47%,
+      rgba(255, 255, 255, 0) 154.12%
+    );
+    border: 1px solid #f9f9f9;
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(
+      180.47deg,
+      #f0ffed -30.47%,
+      rgba(255, 255, 255, 0) 154.12%
+    );
+    border: 1px solid #f9f9f9;
+  }
+
+  &:last-child {
+    background: linear-gradient(
+      180.47deg,
+      #fff4f8 -30.47%,
+      rgba(255, 255, 255, 0) 154.12%
+    );
+    border: 1px solid #f9f9f9;
+  }
+}
+
+.testimonial_card_details {
+  @extend %space-between-center;
+}
+
+.testimonial_card_details_info {
+  @extend %center-vertically;
+
+  gap: 1rem;
+}
+
+.testimonial_card_figure {
+  border-radius: 50%;
+  height: 7.79rem;
+  position: relative;
+  width: 7.79rem;
+}
+
+.testimonial_card_image {
+  @extend %cover;
+}
+
+.testimonial_card_details_person {
+}
+
+.testimonial_card_details_person_name {
+  margin-bottom: 0.5rem;
+
+  .paragraph {
+    @extend %description-20;
+  }
+}
+
+.testimonial_card_details_person_role {
+}
+
+.testimonial_card_details_rating {
+  display: flex;
+  gap: 1rem;
+}
+
+.testimonial_card_quote {
+  max-width: 63rem;
+}

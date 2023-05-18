@@ -20,7 +20,8 @@
             "sponsors": { "type": "SharedSlice" },
             "possibilities": { "type": "SharedSlice" },
             "step_by_step": { "type": "SharedSlice" },
-            "testimonial": { "type": "SharedSlice" }
+            "testimonial": { "type": "SharedSlice" },
+            "features": { "type": "SharedSlice" }
           }
         }
       }

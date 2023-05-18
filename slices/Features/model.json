@@ -1,8 +1,8 @@
 {
-  "id": "become_a_trader",
+  "id": "features",
   "type": "SharedSlice",
-  "name": "BecomeATrader",
-  "description": "BecomeATrader",
+  "name": "Features",
+  "description": "Features",
   "variations": [
     {
       "id": "default",
@@ -21,9 +21,39 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "image": {
-          "type": "Image",
-          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+        "button_label": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Button Label",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button_label_2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Button Label 2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_link_2": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link 2",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {

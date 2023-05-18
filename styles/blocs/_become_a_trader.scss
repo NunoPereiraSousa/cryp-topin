@@ -1,0 +1,63 @@
+.trader {
+  background-color: #eef2f3;
+  padding: 14rem 0;
+}
+
+.trader_wrapper {
+}
+
+.trader_headline {
+  margin: 0 auto 7.8rem;
+  text-align: center;
+
+  strong {
+    @extend %gradient-bold-text;
+  }
+}
+
+.trader_info {
+  @extend %space-between;
+}
+
+.trader_figure {
+  height: 66rem;
+  position: relative;
+  width: 64.1rem;
+}
+
+.trader_image {
+  @extend %cover;
+}
+
+.trader_list {
+  @extend %flex-column;
+
+  gap: 4rem;
+}
+
+.trader_card {
+  @extend %space-between;
+
+  gap: 2rem;
+
+  &:last-child .trader_card_description {
+    border-bottom: none;
+  }
+}
+
+.trader_card_icon {
+  max-height: 8rem;
+}
+
+.trader_card_info {
+}
+
+.trader_card_headline {
+  margin-bottom: 1.8rem;
+}
+
+.trader_card_description {
+  border-bottom: 0.1rem solid #d4d5d6;
+  max-width: 54.2rem;
+  padding-bottom: 4.2rem;
+}

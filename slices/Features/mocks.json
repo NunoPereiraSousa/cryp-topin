@@ -1,0 +1,116 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Do ipsum Lorem in."
+						}
+					}
+				]
+			},
+			"button_label": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Id Lorem sunt cupidatat occaecat anim exercitation sit dolore consectetur laborum."
+						}
+					}
+				]
+			},
+			"button_label_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Magna dolore deserunt reprehenderit consectetur ad esse in ullamco consequat voluptate duis ut enim incididunt. Labore irure deserunt cillum anim consectetur minim do et consectetur."
+						}
+					}
+				]
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
+			},
+			"button_link_2": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+								"width": 5000,
+								"height": 4613
+							},
+							"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+							"width": 5000,
+							"height": 4613,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"headline",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Lorem consequat deserunt labore ipsum Lorem sit elit reprehenderit. Tempor fugiat amet velit nulla. Amet id ad dolore velit aliqua velit id do esse minim aute."
+									}
+								}
+							]
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Officia nulla sint sunt nulla cupidatat exercitation. Aliqua id ipsum dolor velit nostrud exercitation culpa et proident ea enim nostrud enim ad."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -14,13 +14,7 @@
 					}
 				]
 			},
-			"highlighted_word_color": {
-				"__TYPE__": "FieldContent",
-				"value": "#7ed7ea",
-				"type": "Color"
-			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
@@ -38,6 +32,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
@@ -48,7 +45,6 @@
 					[
 						"icon",
 						{
-							"__TYPE__": "ImageContent",
 							"origin": {
 								"id": "main",
 								"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
@@ -66,6 +62,9 @@
 								},
 								"background": "transparent"
 							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
 							"thumbnails": {}
 						}
 					],

@@ -2,7 +2,112 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
-		"items": []
+		"primary": {
+			"headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nisi deserunt sunt ut qui aliquip deserunt dolore do excepteur Lorem culpa minim dolore dolore. In ut quis amet minim est aliqua magna velit sunt occaecat sint sunt consectetur exercitation minim."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute officia dolor aute laborum do aliquip adipisicing."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"profile_image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+								"width": 4160,
+								"height": 3120
+							},
+							"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+							"width": 4160,
+							"height": 3120,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"name",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "In aute incididunt nulla nostrud do Lorem do. Cupidatat in aliquip exercitation adipisicing occaecat cillum aute cupidatat culpa aliqua adipisicing commodo enim nostrud veniam. Enim duis tempor ullamco pariatur nulla nisi enim amet amet dolore fugiat laborum qui occaecat."
+									}
+								}
+							]
+						}
+					],
+					[
+						"rating",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "32",
+							"type": "Number"
+						}
+					],
+					[
+						"quote",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Non nostrud aliquip et id mollit sunt laboris minim esse non ad nostrud tempor. Laboris dolore pariatur duis voluptate officia excepteur non cupidatat deserunt eiusmod incididunt exercitation."
+									}
+								}
+							]
+						}
+					],
+					[
+						"role",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sint minim ut dolor nisi labore dolor sint commodo est quis laboris deserunt occaecat. Dolor esse deserunt deserunt veniam nulla dolore minim veniam."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
 	}
 ]

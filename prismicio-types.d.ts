@@ -222,7 +222,8 @@ type HomepageDocumentDataSlicesSlice =
   | SponsorsSlice
   | PossibilitiesSlice
   | StepByStepSlice
-  | TestimonialSlice;
+  | TestimonialSlice
+  | FeaturesSlice;
 /**
  * Homepage document from Prismic
  *
@@ -254,16 +255,6 @@ interface BecomeATraderSliceDefaultPrimary {
    *
    */
   headline: prismicT.RichTextField;
-  /**
-   * Highlighted Word Color field in *BecomeATrader → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: become_a_trader.primary.highlighted_word_color
-   * - **Documentation**: https://prismic.io/docs/core-concepts/color
-   *
-   */
-  highlighted_word_color: prismicT.ColorField;
   /**
    * Image field in *BecomeATrader → Primary*
    *
@@ -340,6 +331,128 @@ type BecomeATraderSliceVariation = BecomeATraderSliceDefault;
 export type BecomeATraderSlice = prismicT.SharedSlice<
   "become_a_trader",
   BecomeATraderSliceVariation
+>;
+/**
+ * Primary content in Features → Primary
+ *
+ */
+interface FeaturesSliceDefaultPrimary {
+  /**
+   * Headline field in *Features → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.headline
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  headline: prismicT.RichTextField;
+  /**
+   * Button Label field in *Features → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.button_label
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  button_label: prismicT.RichTextField;
+  /**
+   * Button Label 2 field in *Features → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.button_label_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  button_label_2: prismicT.RichTextField;
+  /**
+   * Button Link field in *Features → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link: prismicT.LinkField;
+  /**
+   * Button Link 2 field in *Features → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.button_link_2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  button_link_2: prismicT.LinkField;
+}
+/**
+ * Item in Features → Items
+ *
+ */
+export interface FeaturesSliceDefaultItem {
+  /**
+   * Icon field in *Features → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.items[].icon
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  icon: prismicT.ImageField<never>;
+  /**
+   * Headline field in *Features → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.items[].headline
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  headline: prismicT.RichTextField;
+  /**
+   * Description field in *Features → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.items[].description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Features Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FeaturesSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<FeaturesSliceDefaultPrimary>,
+  Simplify<FeaturesSliceDefaultItem>
+>;
+/**
+ * Slice variation for *Features*
+ *
+ */
+type FeaturesSliceVariation = FeaturesSliceDefault;
+/**
+ * Features Shared Slice
+ *
+ * - **API ID**: `features`
+ * - **Description**: `Features`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FeaturesSlice = prismicT.SharedSlice<
+  "features",
+  FeaturesSliceVariation
 >;
 /**
  * Primary content in FooterItem → Primary
@@ -673,26 +786,6 @@ interface HighlightSliceHighlightMobileAppPrimary {
    */
   description: prismicT.RichTextField;
   /**
-   * Highlighted Word Color field in *Highlight → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: highlight.primary.highlighted_word_color
-   * - **Documentation**: https://prismic.io/docs/core-concepts/color
-   *
-   */
-  highlighted_word_color: prismicT.ColorField;
-  /**
-   * Image field in *Highlight → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: highlight.primary.image
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  image: prismicT.ImageField<never>;
-  /**
    * QR Code field in *Highlight → Primary*
    *
    * - **Field Type**: Image
@@ -722,6 +815,16 @@ interface HighlightSliceHighlightMobileAppPrimary {
    *
    */
   label: prismicT.RichTextField;
+  /**
+   * Image field in *Highlight → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: highlight.primary.image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
 }
 /**
  * Item in Highlight → Items
@@ -796,16 +899,6 @@ interface HighlightedArticlesSliceDefaultPrimary {
    *
    */
   headline: prismicT.RichTextField;
-  /**
-   * Highlighted Word Color field in *HighlightedArticles → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: highlighted_articles.primary.highlighted_word_color
-   * - **Documentation**: https://prismic.io/docs/core-concepts/color
-   *
-   */
-  highlighted_word_color: prismicT.ColorField;
 }
 /**
  * Default variation for HighlightedArticles Slice
@@ -1317,6 +1410,88 @@ export type StepByStepSlice = prismicT.SharedSlice<
   StepByStepSliceVariation
 >;
 /**
+ * Primary content in Testimonial → Primary
+ *
+ */
+interface TestimonialSliceDefaultPrimary {
+  /**
+   * Headline field in *Testimonial → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.primary.headline
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  headline: prismicT.RichTextField;
+  /**
+   * Description field in *Testimonial → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+}
+/**
+ * Item in Testimonial → Items
+ *
+ */
+export interface TestimonialSliceDefaultItem {
+  /**
+   * Profile Image field in *Testimonial → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].profile_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  profile_image: prismicT.ImageField<never>;
+  /**
+   * Name field in *Testimonial → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  name: prismicT.RichTextField;
+  /**
+   * Role field in *Testimonial → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].role
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  role: prismicT.RichTextField;
+  /**
+   * Rating field in *Testimonial → Items*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].rating
+   * - **Documentation**: https://prismic.io/docs/core-concepts/number
+   *
+   */
+  rating: prismicT.NumberField;
+  /**
+   * Quote field in *Testimonial → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial.items[].quote
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  quote: prismicT.RichTextField;
+}
+/**
  * Default variation for Testimonial Slice
  *
  * - **API ID**: `default`
@@ -1326,8 +1501,8 @@ export type StepByStepSlice = prismicT.SharedSlice<
  */
 export type TestimonialSliceDefault = prismicT.SharedSliceVariation<
   "default",
-  Record<string, never>,
-  never
+  Simplify<TestimonialSliceDefaultPrimary>,
+  Simplify<TestimonialSliceDefaultItem>
 >;
 /**
  * Slice variation for *Testimonial*
@@ -1369,6 +1544,11 @@ declare module "@prismicio/client" {
       BecomeATraderSliceDefault,
       BecomeATraderSliceVariation,
       BecomeATraderSlice,
+      FeaturesSliceDefaultPrimary,
+      FeaturesSliceDefaultItem,
+      FeaturesSliceDefault,
+      FeaturesSliceVariation,
+      FeaturesSlice,
       FooterItemSliceDefaultPrimary,
       FooterItemSliceDefaultItem,
       FooterItemSliceDefault,
@@ -1414,6 +1594,8 @@ declare module "@prismicio/client" {
       StepByStepSliceDefault,
       StepByStepSliceVariation,
       StepByStepSlice,
+      TestimonialSliceDefaultPrimary,
+      TestimonialSliceDefaultItem,
       TestimonialSliceDefault,
       TestimonialSliceVariation,
       TestimonialSlice,

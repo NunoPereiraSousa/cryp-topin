@@ -1,0 +1,52 @@
+.features {
+  padding-bottom: 14rem;
+}
+
+.features_wrapper {
+}
+
+.features_headline {
+  margin-bottom: 4.5rem;
+  max-width: 62.9rem;
+
+  strong {
+    @extend %gradient-bold-text;
+  }
+}
+
+.features_grid {
+  column-gap: 4.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 4.6rem;
+}
+
+.feature_card {
+  background-color: #f3f3f3;
+  border-radius: 2rem;
+  padding: 6rem 4.5rem;
+  position: relative;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+
+.feature_card_icon {
+  display: block;
+}
+
+.feature_card_headline {
+  margin-top: 3.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.feature_card_description {
+}
+
+.features_buttons {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4.6rem;
+}

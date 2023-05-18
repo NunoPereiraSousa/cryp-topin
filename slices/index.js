@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   become_a_trader: dynamic(() => import("./BecomeATrader")),
+  features: dynamic(() => import("./Features")),
   footer_item: dynamic(() => import("./FooterItem")),
   hero: dynamic(() => import("./Hero")),
   highlight: dynamic(() => import("./Highlight")),
