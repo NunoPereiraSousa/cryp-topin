@@ -2,11 +2,11 @@
   padding: 14rem 0 4rem;
 
   @include media("<=tablet") {
-    padding: 14rem 2rem 3rem;
+    padding: 14rem 2rem 4rem;
   }
 
   @include media("<phone") {
-    padding: 9rem 2rem;
+    padding: 9rem 2rem 4rem;
   }
 }
 
@@ -113,6 +113,7 @@
   }
 
   @include media("<phone") {
+    border-radius: 1.6rem;
     min-width: auto;
   }
 }

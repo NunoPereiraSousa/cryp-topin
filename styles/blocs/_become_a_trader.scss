@@ -64,6 +64,10 @@
   @extend %flex-column;
 
   gap: 4rem;
+
+  @include media("<phone") {
+    gap: 2.4rem;
+  }
 }
 
 .trader_card {
@@ -100,5 +104,9 @@
   @include media("<=tablet") {
     max-width: none;
     width: 100%;
+  }
+
+  @include media("<phone") {
+    padding-bottom: 2.4rem;
   }
 }

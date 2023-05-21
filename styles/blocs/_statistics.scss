@@ -29,6 +29,8 @@
 
   @include media("<phone") {
     grid-template-columns: 1fr;
+    row-gap: 3rem;
+    width: 100%;
   }
 }
 
@@ -51,12 +53,23 @@
       transform: translateY(-50%);
       height: 7rem;
       width: 0.1rem;
+
+      @include media("<phone") {
+        display: none;
+      }
+    }
+
+    @include media("<phone") {
+      padding-right: 0;
     }
   }
 
   @include media("<phone") {
+    border-bottom: 0.1rem solid #e0e0e0;
     display: grid;
     grid-template-columns: 10rem 1fr;
+    padding-bottom: 3rem;
+    width: 100%;
   }
 }
 

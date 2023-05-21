@@ -61,6 +61,10 @@
   @include media("<=tablet") {
     gap: 3rem;
   }
+
+  @include media("<phone") {
+    gap: 2rem;
+  }
 }
 
 .testimonial_card {

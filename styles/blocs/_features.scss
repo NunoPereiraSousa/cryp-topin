@@ -34,6 +34,7 @@
 
   @include media("<phone") {
     grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 }
 

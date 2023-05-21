@@ -184,6 +184,7 @@
 
   @include media("<phone") {
     height: auto;
+    margin-top: 3rem;
     padding: 4rem 2rem;
   }
 }
