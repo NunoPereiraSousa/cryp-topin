@@ -3,6 +3,7 @@ import { SliceZone } from "@prismicio/react";
 import Head from "next/head";
 import { components } from "../slices";
 import Layout from "@/components/Layout";
+import Footer from "@/components/Footer";
 
 // PASS NAVIGATION INSIDE LAYOUT COMPONENT navigation={navigation} menus={menus}
 
@@ -10,6 +11,7 @@ export default function Page({
   navigation,
   menus,
   page,
+  footer,
   metaTitle,
   metaDescription,
 }) {
@@ -101,6 +103,7 @@ export default function Page({
         components={components}
         context={menus}
       />
+      <Footer footer={footer.data} />
     </Layout>
   );
 }
@@ -108,7 +111,11 @@ export default function Page({
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const page = await client.getSingle("homepage");
+  const page = await client.getSingle("homepage", {
+    fetchLinks:
+      "blog_post.headline, blog_post.description, blog_post.image, blog_post.date",
+  });
+  const footer = await client.getSingle("footer");
   //   const navigation = await client.getSingle("navigation");
   //   const menus = await client.getSingle("menus");
 
@@ -117,6 +124,7 @@ export async function getStaticProps({ params, previewData }) {
       //   navigation,
       //   menus,
       page,
+      footer,
       //   metaTitle: page.data.meta_title,
       //   metaDescription: page.data.meta_description,
     },

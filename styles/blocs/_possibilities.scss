@@ -1,10 +1,19 @@
 .possibilities {
   background-color: #eaeef1;
   padding: 17.2rem;
+
+  @include media("<=tablet") {
+    padding: 14rem 2rem;
+  }
 }
 
 .possibilities_wrapper {
   @extend %space-between;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .possibilities_info {
@@ -30,7 +39,7 @@
 }
 
 .possibility_badge {
-  @extend %center-vertically;
+  @extend %align-center-vertically;
 
   border-radius: 30rem;
   gap: 1rem;
@@ -53,6 +62,11 @@
   height: 57.1rem;
   position: relative;
   width: 64.6rem;
+
+  @include media("<phone") {
+    height: 31.1rem;
+    width: 100%;
+  }
 }
 
 .possibilities_image {

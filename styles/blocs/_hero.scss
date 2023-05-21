@@ -1,5 +1,9 @@
 .hero {
   padding: 32rem 0 9.2rem;
+
+  @include media("<=tablet") {
+    padding: 18rem 2rem 9.2rem;
+  }
 }
 
 .hero_wrapper {
@@ -54,6 +58,10 @@
 .hero_sticker_figure {
   position: absolute;
 
+  @include media("<=tablet") {
+    display: none;
+  }
+
   &:first-child {
     left: 14rem;
     top: 0;
@@ -83,6 +91,11 @@
   margin: auto;
   position: relative;
   width: 144rem;
+
+  @include media("<=tablet") {
+    height: 42.5rem;
+    width: 100%;
+  }
 }
 
 .hero_image {

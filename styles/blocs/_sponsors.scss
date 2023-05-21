@@ -1,5 +1,9 @@
 .sponsors {
   padding: 14rem 0;
+
+  @include media("<=tablet") {
+    padding: 14rem 2rem;
+  }
 }
 
 .sponsors_wrapper {
@@ -9,8 +13,17 @@
   align-items: center;
   display: grid;
   grid-template-columns: repeat(5, max-content);
+  justify-items: center;
   justify-content: space-between;
   row-gap: 6rem;
+
+  @include media("<=tablet") {
+    grid-template-columns: repeat(4, max-content);
+  }
+
+  @include media("<phone") {
+    grid-template-columns: repeat(2, max-content);
+  }
 }
 
 .sponsors_image {

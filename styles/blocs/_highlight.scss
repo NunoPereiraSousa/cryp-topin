@@ -1,11 +1,20 @@
 .highlight {
-  padding: 14rem 0;
+  padding: 24rem 0 14rem;
+
+  @include media("<=tablet") {
+    padding: 14rem 2rem;
+  }
 
   &.highlightMobileApp {
     background-color: #263238;
 
     .highlight_wrapper {
       @extend %space-between;
+
+      @include media("<=tablet") {
+        gap: 3rem;
+        flex-direction: column;
+      }
     }
 
     .highlight_info {
@@ -24,6 +33,11 @@
       height: 46.7rem;
       position: relative;
       width: 66.7rem;
+
+      @include media("<=tablet") {
+        height: 54.7rem;
+        width: 100%;
+      }
     }
 
     .highlight_image {
@@ -33,6 +47,10 @@
     .highlight_description {
       max-width: 54.9rem;
       margin: 2.6rem 0;
+
+      @include media("<=tablet") {
+        margin: 0;
+      }
     }
 
     .highlight_details {
@@ -102,6 +120,12 @@
 
 .highlight_info {
   @extend %space-between-center;
+
+  @include media("<=tablet") {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .highlight_label {
@@ -109,6 +133,10 @@
 
   strong {
     color: #ffb355;
+  }
+
+  @include media("<=tablet") {
+    width: 100%;
   }
 }
 
@@ -123,12 +151,22 @@
   height: 77.112rem;
   padding: 12.8rem 9.4rem 0;
   margin-top: 6rem;
+
+  @include media("<phone") {
+    padding: 4rem 2rem 0;
+  }
 }
 
 .highlight_banner_info {
   @extend %space-between-center;
 
   margin-bottom: 7.2rem;
+
+  @include media("<=tablet") {
+    text-align: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .highlight_banner_headline {
@@ -142,6 +180,10 @@
   .paragraph {
     color: inherit;
   }
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
 }
 
 .highlight_banner_headline {
@@ -150,6 +192,10 @@
 .highlight_banner_badges {
   display: flex;
   gap: 2rem;
+
+  @include media("<phone") {
+    flex-direction: column;
+  }
 }
 
 .highlight_badge {
@@ -171,7 +217,16 @@
   height: 55rem;
   margin: auto;
   position: relative;
-  width: 70%;
+  width: 80%;
+
+  @include media("<=tablet") {
+    height: 34rem;
+    width: 100%;
+  }
+
+  @include media("<phone") {
+    height: 19rem;
+  }
 }
 
 .highlight_banner_image {

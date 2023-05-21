@@ -1,6 +1,10 @@
 .trader {
   background-color: #eef2f3;
   padding: 14rem 0;
+
+  @include media("<=tablet") {
+    padding: 14rem 2rem;
+  }
 }
 
 .trader_wrapper {
@@ -13,16 +17,39 @@
   strong {
     @extend %gradient-bold-text;
   }
+
+  @include media("<=tablet") {
+    margin: 0 auto 4rem;
+  }
 }
 
 .trader_info {
   @extend %space-between;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+  }
+
+  @include media("<phone") {
+    gap: 3rem;
+  }
 }
 
 .trader_figure {
   height: 66rem;
   position: relative;
   width: 64.1rem;
+
+  @include media("<=tablet") {
+    height: 40rem;
+    margin: auto;
+    width: 50%;
+  }
+
+  @include media("<phone") {
+    height: 36rem;
+    width: 100%;
+  }
 }
 
 .trader_image {
@@ -43,6 +70,11 @@
   &:last-child .trader_card_description {
     border-bottom: none;
   }
+
+  @include media("<=tablet") {
+    justify-content: flex-start;
+    gap: 3rem;
+  }
 }
 
 .trader_card_icon {
@@ -60,4 +92,9 @@
   border-bottom: 0.1rem solid #d4d5d6;
   max-width: 54.2rem;
   padding-bottom: 4.2rem;
+
+  @include media("<=tablet") {
+    max-width: none;
+    width: 100%;
+  }
 }

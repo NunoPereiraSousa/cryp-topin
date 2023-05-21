@@ -1,5 +1,9 @@
 .paragraph {
   @extend %description-18;
+
+  strong {
+    font-weight: 700;
+  }
 }
 
 .heading {

@@ -1,0 +1,141 @@
+.highlighted_blogs {
+  padding: 14rem 0;
+
+  @include media("<=tablet") {
+    padding: 14rem 2rem;
+  }
+}
+
+.highlighted_blogs_wrapper {
+}
+
+.highlighted_blogs_headline {
+  margin-bottom: 6rem;
+
+  strong {
+    @extend %gradient-bold-text;
+  }
+}
+
+.highlighted_blogs_slider {
+  //   backface-visibility: hidden;
+  //   display: flex;
+  //   touch-action: pan-y;
+  //   flex-direction: row;
+  //   column-gap: 3.4rem;
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+}
+
+.blog_slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.blog_slider_item {
+  background-color: #f3f3f3;
+  border-radius: 2rem;
+  padding: 6rem 4rem;
+}
+
+.blog_slider_prev {
+  @extend %center;
+
+  background-color: #7781ff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 6rem;
+  width: 6rem;
+
+  position: absolute;
+  left: calc(-6rem / 2);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  transition: all 0.4s ease;
+
+  svg {
+    display: block;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  @include media("<=tablet") {
+    left: 2rem;
+  }
+}
+
+.blog_slider_next {
+  @extend %center;
+
+  background-color: #7781ff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 6rem;
+  width: 6rem;
+
+  position: absolute;
+  right: calc(-6rem / 2);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  transition: all 0.4s ease;
+
+  svg {
+    display: block;
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  @include media("<=tablet") {
+    right: 2rem;
+  }
+}
+
+.blog_slider_item_figure {
+  height: 25.1rem;
+  position: relative;
+  width: 58.5rem;
+
+  @include media("<=tablet") {
+    height: 38.1rem;
+    width: 100%;
+  }
+}
+
+.blog_slider_item_image {
+  @extend %cover;
+}
+
+.blog_slider_item_info {
+  max-width: 55.7rem;
+
+  @include media("<=tablet") {
+    max-width: none;
+  }
+}
+
+.blog_slider_item_date {
+  @extend %description-18;
+
+  margin-top: 4rem;
+}
+
+.blog_slider_item_headline {
+  @extend %heading-30;
+
+  margin: 1.2rem 0 1.6rem;
+}
+
+.blog_slider_item_description {
+  @extend %description-18;
+}

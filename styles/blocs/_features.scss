@@ -1,5 +1,9 @@
 .features {
   padding-bottom: 14rem;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 14rem;
+  }
 }
 
 .features_wrapper {
@@ -19,6 +23,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 4.6rem;
+
+  @include media("<=tablet") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media("<phone") {
+    grid-template-columns: 1fr;
+  }
 }
 
 .feature_card {

@@ -1,5 +1,9 @@
 .statistics {
   padding-bottom: 18rem;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 14rem;
+  }
 }
 
 .statistics_wrapper {
@@ -12,10 +16,14 @@
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
   row-gap: 8rem;
+
+  @include media("<phone") {
+    grid-template-columns: 1fr;
+  }
 }
 
 .statistics_item {
-  @extend %center-vertically;
+  @extend %align-center-vertically;
 
   gap: 2.8rem;
   width: fit-content;

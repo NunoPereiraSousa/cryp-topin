@@ -1,9 +1,16 @@
 .step {
+  @include media("<=tablet") {
+    padding: 0 2rem;
+  }
 }
 
 .step_wrapper {
   border-top: 0.1rem solid #e0e0e0;
   padding-top: 14.4rem;
+
+  @include media("<=tablet") {
+    padding-top: 14rem;
+  }
 }
 
 .step_headline {
@@ -16,6 +23,11 @@
   @extend %space-between;
 
   margin-top: 5rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .step_card {
@@ -25,12 +37,36 @@
   border-radius: 2rem;
   gap: 6rem;
   padding: 6rem 4.8rem;
+
+  @include media("<=tablet") {
+    text-align: center;
+  }
+
+  @include media("<phone") {
+    gap: 2rem;
+  }
+
+  &:nth-child(2) .step_card_info {
+    order: 1;
+  }
+
+  &:nth-child(2) span {
+    order: 1;
+  }
+
+  &:nth-child(2) img {
+    order: 1;
+  }
 }
 
 .step_card_info {
   @extend %flex-column;
 
   gap: 1.8rem;
+
+  @include media("<=tablet") {
+    align-items: center;
+  }
 }
 
 .step_card_headline {
@@ -55,4 +91,10 @@
 
 .step_image {
   max-height: 33.748rem;
+
+  @include media("<=tablet") {
+    max-height: none;
+    width: 45%;
+    margin: auto;
+  }
 }

@@ -5,6 +5,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+
+  @include media("<=tablet") {
+    font-size: 6rem;
+  }
 }
 
 %heading-50 {
@@ -13,7 +17,11 @@
   font-family: $font-headings;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%;
+  line-height: 128%;
+
+  @include media("<=tablet") {
+    font-size: 4rem;
+  }
 }
 
 %heading-45 {
@@ -23,6 +31,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+
+  @include media("<=tablet") {
+    font-size: 3.5rem;
+  }
 }
 
 %heading-40 {
@@ -32,6 +44,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+
+  @include media("<=tablet") {
+    font-size: 3rem;
+    line-height: 140%;
+  }
 }
 
 %heading-35 {
@@ -41,6 +58,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+
+  @include media("<=tablet") {
+    font-size: 2.6rem;
+  }
 }
 
 %heading-30 {
@@ -50,4 +71,8 @@
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
+
+  @include media("<=tablet") {
+    font-size: 2.4rem;
+  }
 }

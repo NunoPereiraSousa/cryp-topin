@@ -15,6 +15,22 @@
 				]
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"blogs",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "DocumentLink",
+								"id": "mock_document_id"
+							}
+						}
+					]
+				]
+			}
+		]
 	}
 ]

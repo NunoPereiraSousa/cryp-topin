@@ -111,7 +111,7 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": {} }
+        "config": { "choices": { "footer_item": { "type": "SharedSlice" } } }
       }
     }
   }

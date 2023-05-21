@@ -6,6 +6,131 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Blog Post documents */
+interface BlogPostDocumentData {
+  /**
+   * Headline field in *Blog Post*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.headline
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  headline: prismicT.RichTextField;
+  /**
+   * Description field in *Blog Post*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+  /**
+   * Date field in *Blog Post*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/date
+   *
+   */
+  date: prismicT.DateField;
+  /**
+   * Image field in *Blog Post*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
+  /**
+   * Content field in *Blog Post*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.content[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  content: prismicT.GroupField<Simplify<BlogPostDocumentDataContentItem>>;
+  /**
+   * Slice Zone field in *Blog Post*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<BlogPostDocumentDataSlicesSlice>;
+}
+/**
+ * Item in Blog Post → Content
+ *
+ */
+export interface BlogPostDocumentDataContentItem {
+  /**
+   * Headline field in *Blog Post → Content*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.content[].headline
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  headline: prismicT.RichTextField;
+  /**
+   * Description field in *Blog Post → Content*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.content[].description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+  /**
+   * Image field in *Blog Post → Content*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.content[].image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
+}
+/**
+ * Slice for *Blog Post → Slice Zone*
+ *
+ */
+type BlogPostDocumentDataSlicesSlice = never;
+/**
+ * Blog Post document from Prismic
+ *
+ * - **API ID**: `blog_post`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogPostDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<BlogPostDocumentData>,
+    "blog_post",
+    Lang
+  >;
 /** Content for Footer documents */
 interface FooterDocumentData {
   /**
@@ -182,7 +307,7 @@ export interface FooterDocumentDataTermsItem {
  * Slice for *Footer → Slice Zone*
  *
  */
-type FooterDocumentDataSlicesSlice = never;
+type FooterDocumentDataSlicesSlice = FooterItemSlice;
 /**
  * Footer document from Prismic
  *
@@ -239,7 +364,10 @@ export type HomepageDocument<Lang extends string = string> =
     "homepage",
     Lang
   >;
-export type AllDocumentTypes = FooterDocument | HomepageDocument;
+export type AllDocumentTypes =
+  | BlogPostDocument
+  | FooterDocument
+  | HomepageDocument;
 /**
  * Primary content in BecomeATrader → Primary
  *
@@ -901,6 +1029,22 @@ interface HighlightedArticlesSliceDefaultPrimary {
   headline: prismicT.RichTextField;
 }
 /**
+ * Item in HighlightedArticles → Items
+ *
+ */
+export interface HighlightedArticlesSliceDefaultItem {
+  /**
+   * Blogs field in *HighlightedArticles → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: highlighted_articles.items[].blogs
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  blogs: prismicT.RelationField<"blog_post">;
+}
+/**
  * Default variation for HighlightedArticles Slice
  *
  * - **API ID**: `default`
@@ -911,7 +1055,7 @@ interface HighlightedArticlesSliceDefaultPrimary {
 export type HighlightedArticlesSliceDefault = prismicT.SharedSliceVariation<
   "default",
   Simplify<HighlightedArticlesSliceDefaultPrimary>,
-  never
+  Simplify<HighlightedArticlesSliceDefaultItem>
 >;
 /**
  * Slice variation for *HighlightedArticles*
@@ -945,16 +1089,6 @@ interface NewsletterSliceDefaultPrimary {
    *
    */
   headline: prismicT.RichTextField;
-  /**
-   * Highlighted Word Color field in *Newsletter → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: newsletter.primary.highlighted_word_color
-   * - **Documentation**: https://prismic.io/docs/core-concepts/color
-   *
-   */
-  highlighted_word_color: prismicT.ColorField;
   /**
    * Image field in *Newsletter → Primary*
    *
@@ -1530,6 +1664,10 @@ declare module "@prismicio/client" {
   }
   namespace Content {
     export type {
+      BlogPostDocumentData,
+      BlogPostDocumentDataContentItem,
+      BlogPostDocumentDataSlicesSlice,
+      BlogPostDocument,
       FooterDocumentData,
       FooterDocumentDataSocialsItem,
       FooterDocumentDataTermsItem,
@@ -1568,6 +1706,7 @@ declare module "@prismicio/client" {
       HighlightSliceVariation,
       HighlightSlice,
       HighlightedArticlesSliceDefaultPrimary,
+      HighlightedArticlesSliceDefaultItem,
       HighlightedArticlesSliceDefault,
       HighlightedArticlesSliceVariation,
       HighlightedArticlesSlice,

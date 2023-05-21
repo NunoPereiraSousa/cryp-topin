@@ -22,7 +22,16 @@
           }
         }
       },
-      "items": {}
+      "items": {
+        "blogs": {
+          "type": "Link",
+          "config": {
+            "label": "Blogs",
+            "select": "document",
+            "customtypes": ["blog_post"]
+          }
+        }
+      }
     }
   ]
 }
