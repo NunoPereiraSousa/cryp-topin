@@ -4,6 +4,10 @@
   @include media("<=tablet") {
     padding: 14rem 2rem;
   }
+
+  @include media("<phone") {
+    padding: 9rem 2rem;
+  }
 }
 
 .highlighted_blogs_wrapper {
@@ -15,16 +19,13 @@
   strong {
     @extend %gradient-bold-text;
   }
+
+  @include media("<phone") {
+    margin-bottom: 3rem;
+  }
 }
 
 .highlighted_blogs_slider {
-  //   backface-visibility: hidden;
-  //   display: flex;
-  //   touch-action: pan-y;
-  //   flex-direction: row;
-  //   column-gap: 3.4rem;
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
 }
 
 .blog_slider {
@@ -37,6 +38,10 @@
   background-color: #f3f3f3;
   border-radius: 2rem;
   padding: 6rem 4rem;
+
+  @include media("<phone") {
+    padding: 2rem;
+  }
 }
 
 .blog_slider_prev {
@@ -59,6 +64,12 @@
   svg {
     display: block;
     margin-right: 0.5rem;
+
+    @include media("<phone") {
+      height: 2.1rem;
+      width: 1rem;
+      margin-right: 0;
+    }
   }
 
   &:hover {
@@ -67,6 +78,13 @@
 
   @include media("<=tablet") {
     left: 2rem;
+  }
+
+  @include media("<phone") {
+    height: 4rem;
+    width: 4rem;
+    left: 0;
+    top: 20%;
   }
 }
 
@@ -90,6 +108,12 @@
   svg {
     display: block;
     margin-left: 0.5rem;
+
+    @include media("<phone") {
+      height: 2.1rem;
+      margin-left: 0;
+      width: 1rem;
+    }
   }
 
   &:hover {
@@ -98,6 +122,13 @@
 
   @include media("<=tablet") {
     right: 2rem;
+  }
+
+  @include media("<phone") {
+    height: 4rem;
+    width: 4rem;
+    right: 0;
+    top: 20%;
   }
 }
 
@@ -109,6 +140,10 @@
   @include media("<=tablet") {
     height: 38.1rem;
     width: 100%;
+  }
+
+  @include media("<phone") {
+    height: 16.1rem;
   }
 }
 
@@ -128,6 +163,10 @@
   @extend %description-18;
 
   margin-top: 4rem;
+
+  @include media("<phone") {
+    margin-top: 2rem;
+  }
 }
 
 .blog_slider_item_headline {

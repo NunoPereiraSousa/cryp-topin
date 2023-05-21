@@ -5,6 +5,10 @@
     padding: 14rem 2rem;
   }
 
+  @include media("<phone") {
+    padding: 9rem 2rem;
+  }
+
   &.highlightMobileApp {
     background-color: #263238;
 
@@ -38,6 +42,10 @@
         height: 54.7rem;
         width: 100%;
       }
+
+      @include media("<phone") {
+        height: 24.7rem;
+      }
     }
 
     .highlight_image {
@@ -57,6 +65,12 @@
       @extend %space-between-center;
 
       width: 100%;
+
+      @include media("<phone") {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
     }
 
     .highlight_details_info {
@@ -70,6 +84,13 @@
 
       justify-content: center;
       gap: 0.6rem;
+    }
+
+    .highlight_details_figure {
+      @include media("<phone") {
+        height: 7.5rem;
+        width: 7.5rem;
+      }
     }
 
     .highlight_details_text_sub_headline {
@@ -100,6 +121,11 @@
       transition: all 0.4s ease;
       width: 8rem;
 
+      @include media("<phone") {
+        height: 6rem;
+        width: 6rem;
+      }
+
       &:hover {
         background-color: #394952;
       }
@@ -125,6 +151,10 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  @include media("<phone") {
+    gap: 1.6rem;
   }
 }
 
@@ -153,7 +183,8 @@
   margin-top: 6rem;
 
   @include media("<phone") {
-    padding: 4rem 2rem 0;
+    height: auto;
+    padding: 4rem 2rem;
   }
 }
 
@@ -166,6 +197,10 @@
     text-align: center;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  @include media("<phone") {
+    margin-bottom: 3rem;
   }
 }
 
@@ -183,6 +218,10 @@
 
   @include media("<=tablet") {
     width: 100%;
+  }
+
+  @include media("<phone") {
+    margin-top: 1.4rem;
   }
 }
 
@@ -204,6 +243,10 @@
   display: flex;
   gap: 1rem;
   padding: 1.8rem 2.4rem;
+
+  @include media("<phone") {
+    padding: 0.8rem 1.6rem;
+  }
 }
 
 .highlight_badge_image {

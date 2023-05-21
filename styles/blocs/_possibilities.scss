@@ -5,6 +5,10 @@
   @include media("<=tablet") {
     padding: 14rem 2rem;
   }
+
+  @include media("<phone") {
+    padding: 9rem 2rem;
+  }
 }
 
 .possibilities_wrapper {
@@ -55,6 +59,10 @@
 
   .paragraph {
     color: inherit;
+  }
+
+  @include media("<phone") {
+    white-space: normal;
   }
 }
 

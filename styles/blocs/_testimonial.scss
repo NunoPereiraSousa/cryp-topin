@@ -2,7 +2,11 @@
   padding: 11rem 0 14rem;
 
   @include media("<=tablet") {
-    padding: 14rem 2rem 14rem;
+    padding: 14rem 2rem;
+  }
+
+  @include media("<phone") {
+    padding: 9rem 2rem;
   }
 }
 
@@ -33,10 +37,19 @@
   strong {
     @extend %gradient-bold-text;
   }
+
+  @include media("<phone") {
+    max-width: 80%;
+    margin-bottom: 1.6rem;
+  }
 }
 
 .testimonial_description {
   max-width: 54.9rem;
+
+  @include media("<phone") {
+    max-width: none;
+  }
 }
 
 .testimonial_list {
@@ -59,6 +72,11 @@
 
   @include media("<=tablet") {
     padding: 3.2rem 3rem;
+  }
+
+  @include media("<phone") {
+    padding: 3rem 2rem;
+    gap: 2rem;
   }
 
   &:first-child {
@@ -119,6 +137,11 @@
   height: 7.79rem;
   position: relative;
   width: 7.79rem;
+
+  @include media("<phone") {
+    height: 6rem;
+    width: 6rem;
+  }
 }
 
 .testimonial_card_image {
@@ -142,8 +165,17 @@
 .testimonial_card_details_rating {
   display: flex;
   gap: 1rem;
+
+  svg {
+    height: 2rem;
+    width: 2.1rem;
+  }
 }
 
 .testimonial_card_quote {
   max-width: 63rem;
+
+  @include media("<phone") {
+    max-width: none;
+  }
 }

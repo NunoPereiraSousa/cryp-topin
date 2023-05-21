@@ -4,6 +4,10 @@
   @include media("<=tablet") {
     padding: 0 2rem 14rem;
   }
+
+  @include media("<phone") {
+    padding: 0 2rem 9rem;
+  }
 }
 
 .features_wrapper {
@@ -43,15 +47,27 @@
   &:hover {
     transform: scale(1.025);
   }
+
+  @include media("<phone") {
+    padding: 3rem 2rem;
+  }
 }
 
 .feature_card_icon {
   display: block;
+
+  @include media("<phone") {
+    width: 10%;
+  }
 }
 
 .feature_card_headline {
   margin-top: 3.2rem;
   margin-bottom: 1.4rem;
+
+  @include media("<phone") {
+    margin-top: 2rem;
+  }
 }
 
 .feature_card_description {
@@ -61,4 +77,10 @@
   display: flex;
   gap: 3rem;
   margin-top: 4.6rem;
+
+  @include media("<phone") {
+    gap: 1.6rem;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
 }

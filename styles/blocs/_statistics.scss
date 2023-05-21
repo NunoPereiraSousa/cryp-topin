@@ -4,10 +4,20 @@
   @include media("<=tablet") {
     padding: 0 2rem 14rem;
   }
+
+  @include media("<phone") {
+    padding: 0 2rem 9rem;
+  }
 }
 
 .statistics_wrapper {
   @extend %space-between-center;
+
+  @include media("<phone") {
+    gap: 3rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .statistics_grid {
@@ -43,6 +53,11 @@
       width: 0.1rem;
     }
   }
+
+  @include media("<phone") {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+  }
 }
 
 .statistics_number {
@@ -65,12 +80,21 @@
 
 .statistics_description {
   min-width: 16.3rem;
+
+  @include media("<phone") {
+    min-width: auto;
+  }
 }
 
 .statistics_figure {
   height: 24.9rem;
   position: relative;
   width: 48rem;
+
+  @include media("<phone") {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .statistics_image {

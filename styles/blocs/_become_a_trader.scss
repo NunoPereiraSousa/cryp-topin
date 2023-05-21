@@ -5,6 +5,10 @@
   @include media("<=tablet") {
     padding: 14rem 2rem;
   }
+
+  @include media("<phone") {
+    padding: 9rem 2rem;
+  }
 }
 
 .trader_wrapper {
